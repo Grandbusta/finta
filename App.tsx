@@ -1,11 +1,11 @@
 import React, {type PropsWithChildren} from 'react';
 import {SafeAreaView, ScrollView, StyleSheet, Text, View} from 'react-native';
 import Home from './src/screens/home';
-import Tabs from './src/navigation';
+import Navigation from './src/navigation';
 
 function App() {
   return (
-    <Tabs />
+    <Navigation />
     // <SafeAreaView style={{flex: 1, justifyContent: 'center'}}>
     //   <View style={styles.textView}>
     //     <Text style={{fontSize: 26, fontWeight: 'bold', color: 'black'}}>

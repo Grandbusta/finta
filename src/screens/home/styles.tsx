@@ -1,10 +1,12 @@
 import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
-  container: {
+  safeArea: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: 'white',
+  },
+  container: {
+    padding: 20,
   },
   bodyText: {
     fontSize: 18,
