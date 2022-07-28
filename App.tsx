@@ -4,16 +4,7 @@ import Home from './src/screens/home';
 import Navigation from './src/navigation';
 
 function App() {
-  return (
-    <Navigation />
-    // <SafeAreaView style={{flex: 1, justifyContent: 'center'}}>
-    //   <View style={styles.textView}>
-    //     <Text style={{fontSize: 26, fontWeight: 'bold', color: 'black'}}>
-    //       This is a new app
-    //     </Text>
-    //   </View>
-    // </SafeAreaView>
-  );
+  return <Navigation />;
 }
 
 const styles = StyleSheet.create({
