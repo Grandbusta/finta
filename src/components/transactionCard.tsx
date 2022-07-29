@@ -1,5 +1,12 @@
 import React from 'react';
-import {Image, Text, View, StyleSheet, ImageSourcePropType} from 'react-native';
+import {
+  Image,
+  Text,
+  View,
+  StyleSheet,
+  ImageSourcePropType,
+  TouchableOpacity,
+} from 'react-native';
 
 interface ITransactionCardProps {
   imgUrl: ImageSourcePropType;
@@ -15,28 +22,30 @@ export default function TransactionCard({
   amount,
 }: ITransactionCardProps) {
   return (
-    <View style={styles.container}>
-      <View style={styles.cardView}>
-        <View style={styles.beneficiaryView}>
-          <Image source={imgUrl} style={styles.profileImg} />
-          <View style={styles.beneficiaryDetailsView}>
-            <Text style={styles.beneficiaryName}>{beneficiaryName}</Text>
-            <Text style={styles.transactionDate}>10 March 2021</Text>
+    <TouchableOpacity>
+      <View style={styles.container}>
+        <View style={styles.cardView}>
+          <View style={styles.beneficiaryView}>
+            <Image source={imgUrl} style={styles.profileImg} />
+            <View style={styles.beneficiaryDetailsView}>
+              <Text style={styles.beneficiaryName}>{beneficiaryName}</Text>
+              <Text style={styles.transactionDate}>10 March 2021</Text>
+            </View>
+          </View>
+          <View
+            style={{
+              ...styles.amountView,
+              backgroundColor: type == 'debit' ? '#f9eaed' : '#e6f2f2',
+            }}>
+            <Text
+              style={{
+                ...styles.amount,
+                color: type == 'debit' ? 'red' : 'green',
+              }}>{`${type == 'debit' ? `-` : `+`}$${amount}`}</Text>
           </View>
         </View>
-        <View
-          style={{
-            ...styles.amountView,
-            backgroundColor: type == 'debit' ? '#f9eaed' : '#e6f2f2',
-          }}>
-          <Text
-            style={{
-              ...styles.amount,
-              color: type == 'debit' ? 'red' : 'green',
-            }}>{`${type == 'debit' ? `-` : `+`}$${amount}`}</Text>
-        </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 

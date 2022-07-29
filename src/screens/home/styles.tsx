@@ -15,4 +15,9 @@ export default StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
   },
+  optionView: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
 });
