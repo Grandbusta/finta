@@ -1,10 +1,12 @@
 import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
-  container: {
+  safeArea: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: 'white',
+  },
+  container: {
+    paddingHorizontal: 20,
   },
   bodyText: {
     fontSize: 18,
@@ -12,5 +14,9 @@ export default StyleSheet.create({
   titleText: {
     fontSize: 24,
     fontWeight: 'bold',
+  },
+  overviewTotal: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
 });

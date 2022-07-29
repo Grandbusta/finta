@@ -59,8 +59,8 @@ export default function Home() {
             <Greetings name="Busta" imgUrl={profileImg} />
             <AvailableBalance amount="5678.90" />
             <View style={styles.optionView}>
-              {options.map(opt => (
-                <Option text={opt.text} icon={opt.icon} />
+              {options.map((opt, index) => (
+                <Option text={opt.text} icon={opt.icon} key={index} />
               ))}
             </View>
             <Title text={`Recent Transactions`} children={seeAll()} />
